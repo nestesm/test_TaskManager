@@ -48,7 +48,7 @@ class Task:
         try:
             return datetime.strptime(date_str, "%Y-%m-%d")
         except ValueError:
-            return 'Дата должна быть в формате YYYY-MM-DD'  
+            raise "Дата должна быть в формате YYYY-MM-DD"  
         
     @property
     def id(self) -> Optional[int]:
